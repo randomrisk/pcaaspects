@@ -69,12 +69,6 @@ python scripts/visualize_subjects.py \
   --output-dir outputs/visualizations
 ```
 
-## Testing
-
-```bash
-pytest
-```
-
 ## Intended use
 
 The code and models are provided for research reproducibility and are not validated for clinical use. Do not redistribute clinical data, subject-level outputs, or third-party assets without authorization.
