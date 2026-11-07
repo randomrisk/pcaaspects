@@ -1,0 +1,46 @@
+paths:
+  feature_table: data/features.csv
+  train_ids: data/train_ids.csv
+  test_ids: data/test_ids.csv
+  model_dir: models
+  output_dir: outputs/evaluation
+  training_model_dir: outputs/training/models
+  training_output_dir: outputs/training
+
+columns:
+  subject: subject
+  features:
+    - PCA_qfv
+    - thalamus_qfv
+    - cerebellum_qfv
+    - pons_qfv
+    - midbrain_qfv
+    - logVol
+
+regions:
+  - key: PCA
+    truth_column: PCA
+    binarize_truth: true
+  - key: Thalamus
+    truth_column: Thalamus
+    binarize_truth: true
+  - key: cerebellum
+    truth_column: cerebellum
+    binarize_truth: true
+  - key: pons_y
+    truth_column: pons_y
+    binarize_truth: false
+  - key: midbrain_y
+    truth_column: midbrain_y
+    binarize_truth: false
+
+models:
+  - LDA
+  - QDA
+  - KNN
+  - SVM
+  - RF
+  - MLP
+
+training:
+  random_state: 42
